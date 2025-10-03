@@ -1,0 +1,28 @@
+import random
+name=str(input("enter name"))
+a=int(input("enter starting of range"))
+b=int(input("enter ending of range"))
+print("you can start the game")
+num=random.randint(a,b)
+for i in range (5):
+    guess=int(input("guess a number from ",a,b))
+    if (guess==num):
+        if i==0:
+            print("excellent")
+            print("you won")
+        elif i==1:
+            print("good")
+            print("you won")
+        elif i==2:
+            print("better")
+            print("you won")
+        else:
+            print("you won")
+        break
+    elif(abs(num-guess)<=5):
+        print("close")
+    else:
+        print("you are going far")
+else:
+    print("out of chances!!!. try again ")
+
